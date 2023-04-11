@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>wasmtime.bindgen.generated API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>wasmtime.bindgen.generated</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from .imports import BindgenImports
+from .intrinsics import _decode_utf8, _encode_utf8, _list_canon_lift, _list_canon_lower, _load
+from .types import Err, Ok, Result
+import ctypes
+import os
+from typing import List, Tuple, cast
+import wasmtime
+
+class Bindgen:
+    
+    def __init__(self, store: wasmtime.Store, import_object: BindgenImports) -&gt; None:
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;bindgen.core2.wasm&#39;)
+        module = wasmtime.Module.from_file(store.engine, path)
+        instance0 = wasmtime.Instance(store, module, []).exports(store)
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;bindgen.core0.wasm&#39;)
+        module = wasmtime.Module.from_file(store.engine, path)
+        instance1 = wasmtime.Instance(store, module, [
+            instance0[&#34;2&#34;],
+            instance0[&#34;3&#34;],
+            instance0[&#34;4&#34;],
+            instance0[&#34;5&#34;],
+            instance0[&#34;6&#34;],
+        ]).exports(store)
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;bindgen.core1.wasm&#39;)
+        module = wasmtime.Module.from_file(store.engine, path)
+        instance2 = wasmtime.Instance(store, module, [
+            instance1[&#34;memory&#34;],
+            instance0[&#34;0&#34;],
+            instance0[&#34;1&#34;],
+        ]).exports(store)
+        core_memory0 = instance1[&#34;memory&#34;]
+        assert(isinstance(core_memory0, wasmtime.Memory))
+        self._core_memory0 = core_memory0
+        def lowering0_callee(caller: wasmtime.Caller, arg0: int, arg1: int) -&gt; None:
+            ptr = arg0
+            len0 = arg1
+            list = cast(bytes, _list_canon_lift(ptr, len0, 1, ctypes.c_uint8, self._core_memory0, caller))
+            import_object.python.print(list)
+        lowering0_ty = wasmtime.FuncType([wasmtime.ValType.i32(), wasmtime.ValType.i32(), ], [])
+        lowering0 = wasmtime.Func(store, lowering0_ty, lowering0_callee, access_caller = True)
+        def lowering1_callee(caller: wasmtime.Caller, arg0: int, arg1: int) -&gt; None:
+            ptr = arg0
+            len0 = arg1
+            list = cast(bytes, _list_canon_lift(ptr, len0, 1, ctypes.c_uint8, self._core_memory0, caller))
+            import_object.python.eprint(list)
+        lowering1_ty = wasmtime.FuncType([wasmtime.ValType.i32(), wasmtime.ValType.i32(), ], [])
+        lowering1 = wasmtime.Func(store, lowering1_ty, lowering1_callee, access_caller = True)
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;bindgen.core3.wasm&#39;)
+        module = wasmtime.Module.from_file(store.engine, path)
+        instance3 = wasmtime.Instance(store, module, [
+            lowering0,
+            lowering1,
+            instance2[&#34;fd_write&#34;],
+            instance2[&#34;random_get&#34;],
+            instance2[&#34;environ_get&#34;],
+            instance2[&#34;environ_sizes_get&#34;],
+            instance2[&#34;proc_exit&#34;],
+            instance0[&#34;$imports&#34;],
+        ]).exports(store)
+        realloc0 = instance1[&#34;cabi_realloc&#34;]
+        assert(isinstance(realloc0, wasmtime.Func))
+        self._realloc0 = realloc0
+        post_return0 = instance1[&#34;cabi_post_generate&#34;]
+        assert(isinstance(post_return0, wasmtime.Func))
+        self._post_return0 = post_return0
+        lift_callee0 = instance1[&#34;generate&#34;]
+        assert(isinstance(lift_callee0, wasmtime.Func))
+        self.lift_callee0 = lift_callee0
+    def generate(self, caller: wasmtime.Store, name: str, wit: bytes) -&gt; Result[List[Tuple[str, bytes]], str]:
+        ptr, len0 = _encode_utf8(name, self._realloc0, self._core_memory0, caller)
+        ptr1, len2 = _list_canon_lower(wit, ctypes.c_uint8, 1, 1, self._realloc0, self._core_memory0, caller)
+        ret = self.lift_callee0(caller, ptr, len0, ptr1, len2)
+        assert(isinstance(ret, int))
+        load = _load(ctypes.c_uint8, self._core_memory0, caller, ret, 0)
+        expected: Result[List[Tuple[str, bytes]], str]
+        if load == 0:
+            load3 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 4)
+            load4 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 8)
+            ptr15 = load3
+            len16 = load4
+            result: List[Tuple[str, bytes]] = []
+            for i17 in range(0, len16):
+                base5 = ptr15 + i17 * 16
+                load6 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 0)
+                load7 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 4)
+                ptr8 = load6
+                len9 = load7
+                list = _decode_utf8(self._core_memory0, caller, ptr8, len9)
+                load10 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 8)
+                load11 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 12)
+                ptr12 = load10
+                len13 = load11
+                list14 = cast(bytes, _list_canon_lift(ptr12, len13, 1, ctypes.c_uint8, self._core_memory0, caller))
+                result.append((list, list14,))
+            expected = Ok(result)
+        elif load == 1:
+            load18 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 4)
+            load19 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 8)
+            ptr20 = load18
+            len21 = load19
+            list22 = _decode_utf8(self._core_memory0, caller, ptr20, len21)
+            expected = Err(list22)
+        else:
+            raise TypeError(&#34;invalid variant discriminant for expected&#34;)
+        self._post_return0(caller, ret)
+        return expected</code></pre>
+</details>
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="wasmtime.bindgen.generated.imports" href="imports/index.html">wasmtime.bindgen.generated.imports</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="wasmtime.bindgen.generated.intrinsics" href="intrinsics.html">wasmtime.bindgen.generated.intrinsics</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt><code class="name"><a title="wasmtime.bindgen.generated.types" href="types.html">wasmtime.bindgen.generated.types</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="wasmtime.bindgen.generated.Bindgen"><code class="flex name class">
+<span>class <span class="ident">Bindgen</span></span>
+<span>(</span><span>store: wasmtime._store.Store, import_object: <a title="wasmtime.bindgen.generated.imports.BindgenImports" href="imports/index.html#wasmtime.bindgen.generated.imports.BindgenImports">BindgenImports</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Bindgen:
+    
+    def __init__(self, store: wasmtime.Store, import_object: BindgenImports) -&gt; None:
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;bindgen.core2.wasm&#39;)
+        module = wasmtime.Module.from_file(store.engine, path)
+        instance0 = wasmtime.Instance(store, module, []).exports(store)
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;bindgen.core0.wasm&#39;)
+        module = wasmtime.Module.from_file(store.engine, path)
+        instance1 = wasmtime.Instance(store, module, [
+            instance0[&#34;2&#34;],
+            instance0[&#34;3&#34;],
+            instance0[&#34;4&#34;],
+            instance0[&#34;5&#34;],
+            instance0[&#34;6&#34;],
+        ]).exports(store)
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;bindgen.core1.wasm&#39;)
+        module = wasmtime.Module.from_file(store.engine, path)
+        instance2 = wasmtime.Instance(store, module, [
+            instance1[&#34;memory&#34;],
+            instance0[&#34;0&#34;],
+            instance0[&#34;1&#34;],
+        ]).exports(store)
+        core_memory0 = instance1[&#34;memory&#34;]
+        assert(isinstance(core_memory0, wasmtime.Memory))
+        self._core_memory0 = core_memory0
+        def lowering0_callee(caller: wasmtime.Caller, arg0: int, arg1: int) -&gt; None:
+            ptr = arg0
+            len0 = arg1
+            list = cast(bytes, _list_canon_lift(ptr, len0, 1, ctypes.c_uint8, self._core_memory0, caller))
+            import_object.python.print(list)
+        lowering0_ty = wasmtime.FuncType([wasmtime.ValType.i32(), wasmtime.ValType.i32(), ], [])
+        lowering0 = wasmtime.Func(store, lowering0_ty, lowering0_callee, access_caller = True)
+        def lowering1_callee(caller: wasmtime.Caller, arg0: int, arg1: int) -&gt; None:
+            ptr = arg0
+            len0 = arg1
+            list = cast(bytes, _list_canon_lift(ptr, len0, 1, ctypes.c_uint8, self._core_memory0, caller))
+            import_object.python.eprint(list)
+        lowering1_ty = wasmtime.FuncType([wasmtime.ValType.i32(), wasmtime.ValType.i32(), ], [])
+        lowering1 = wasmtime.Func(store, lowering1_ty, lowering1_callee, access_caller = True)
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), &#39;bindgen.core3.wasm&#39;)
+        module = wasmtime.Module.from_file(store.engine, path)
+        instance3 = wasmtime.Instance(store, module, [
+            lowering0,
+            lowering1,
+            instance2[&#34;fd_write&#34;],
+            instance2[&#34;random_get&#34;],
+            instance2[&#34;environ_get&#34;],
+            instance2[&#34;environ_sizes_get&#34;],
+            instance2[&#34;proc_exit&#34;],
+            instance0[&#34;$imports&#34;],
+        ]).exports(store)
+        realloc0 = instance1[&#34;cabi_realloc&#34;]
+        assert(isinstance(realloc0, wasmtime.Func))
+        self._realloc0 = realloc0
+        post_return0 = instance1[&#34;cabi_post_generate&#34;]
+        assert(isinstance(post_return0, wasmtime.Func))
+        self._post_return0 = post_return0
+        lift_callee0 = instance1[&#34;generate&#34;]
+        assert(isinstance(lift_callee0, wasmtime.Func))
+        self.lift_callee0 = lift_callee0
+    def generate(self, caller: wasmtime.Store, name: str, wit: bytes) -&gt; Result[List[Tuple[str, bytes]], str]:
+        ptr, len0 = _encode_utf8(name, self._realloc0, self._core_memory0, caller)
+        ptr1, len2 = _list_canon_lower(wit, ctypes.c_uint8, 1, 1, self._realloc0, self._core_memory0, caller)
+        ret = self.lift_callee0(caller, ptr, len0, ptr1, len2)
+        assert(isinstance(ret, int))
+        load = _load(ctypes.c_uint8, self._core_memory0, caller, ret, 0)
+        expected: Result[List[Tuple[str, bytes]], str]
+        if load == 0:
+            load3 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 4)
+            load4 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 8)
+            ptr15 = load3
+            len16 = load4
+            result: List[Tuple[str, bytes]] = []
+            for i17 in range(0, len16):
+                base5 = ptr15 + i17 * 16
+                load6 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 0)
+                load7 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 4)
+                ptr8 = load6
+                len9 = load7
+                list = _decode_utf8(self._core_memory0, caller, ptr8, len9)
+                load10 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 8)
+                load11 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 12)
+                ptr12 = load10
+                len13 = load11
+                list14 = cast(bytes, _list_canon_lift(ptr12, len13, 1, ctypes.c_uint8, self._core_memory0, caller))
+                result.append((list, list14,))
+            expected = Ok(result)
+        elif load == 1:
+            load18 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 4)
+            load19 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 8)
+            ptr20 = load18
+            len21 = load19
+            list22 = _decode_utf8(self._core_memory0, caller, ptr20, len21)
+            expected = Err(list22)
+        else:
+            raise TypeError(&#34;invalid variant discriminant for expected&#34;)
+        self._post_return0(caller, ret)
+        return expected</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="wasmtime.bindgen.generated.Bindgen.generate"><code class="name flex">
+<span>def <span class="ident">generate</span></span>(<span>self, caller: wasmtime._store.Store, name: str, wit: bytes) ‑> Union[<a title="wasmtime.bindgen.generated.types.Ok" href="types.html#wasmtime.bindgen.generated.types.Ok">Ok</a>[List[Tuple[str, bytes]]], <a title="wasmtime.bindgen.generated.types.Err" href="types.html#wasmtime.bindgen.generated.types.Err">Err</a>[str]]</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate(self, caller: wasmtime.Store, name: str, wit: bytes) -&gt; Result[List[Tuple[str, bytes]], str]:
+    ptr, len0 = _encode_utf8(name, self._realloc0, self._core_memory0, caller)
+    ptr1, len2 = _list_canon_lower(wit, ctypes.c_uint8, 1, 1, self._realloc0, self._core_memory0, caller)
+    ret = self.lift_callee0(caller, ptr, len0, ptr1, len2)
+    assert(isinstance(ret, int))
+    load = _load(ctypes.c_uint8, self._core_memory0, caller, ret, 0)
+    expected: Result[List[Tuple[str, bytes]], str]
+    if load == 0:
+        load3 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 4)
+        load4 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 8)
+        ptr15 = load3
+        len16 = load4
+        result: List[Tuple[str, bytes]] = []
+        for i17 in range(0, len16):
+            base5 = ptr15 + i17 * 16
+            load6 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 0)
+            load7 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 4)
+            ptr8 = load6
+            len9 = load7
+            list = _decode_utf8(self._core_memory0, caller, ptr8, len9)
+            load10 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 8)
+            load11 = _load(ctypes.c_int32, self._core_memory0, caller, base5, 12)
+            ptr12 = load10
+            len13 = load11
+            list14 = cast(bytes, _list_canon_lift(ptr12, len13, 1, ctypes.c_uint8, self._core_memory0, caller))
+            result.append((list, list14,))
+        expected = Ok(result)
+    elif load == 1:
+        load18 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 4)
+        load19 = _load(ctypes.c_int32, self._core_memory0, caller, ret, 8)
+        ptr20 = load18
+        len21 = load19
+        list22 = _decode_utf8(self._core_memory0, caller, ptr20, len21)
+        expected = Err(list22)
+    else:
+        raise TypeError(&#34;invalid variant discriminant for expected&#34;)
+    self._post_return0(caller, ret)
+    return expected</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="wasmtime.bindgen" href="../index.html">wasmtime.bindgen</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="wasmtime.bindgen.generated.imports" href="imports/index.html">wasmtime.bindgen.generated.imports</a></code></li>
+<li><code><a title="wasmtime.bindgen.generated.intrinsics" href="intrinsics.html">wasmtime.bindgen.generated.intrinsics</a></code></li>
+<li><code><a title="wasmtime.bindgen.generated.types" href="types.html">wasmtime.bindgen.generated.types</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="wasmtime.bindgen.generated.Bindgen" href="#wasmtime.bindgen.generated.Bindgen">Bindgen</a></code></h4>
+<ul class="">
+<li><code><a title="wasmtime.bindgen.generated.Bindgen.generate" href="#wasmtime.bindgen.generated.Bindgen.generate">generate</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
